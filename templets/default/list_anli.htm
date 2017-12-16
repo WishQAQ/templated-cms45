@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>{dede:field name='typename'/}-{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:global.cfg_keywords/}">
+<meta name="description" content="{dede:global.cfg_description/}">
+<link type="text/css" rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/style.css">
+<link type="text/css" rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/flexslider.css">
+<link type="text/css" rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/jquery.fancybox.css">
+<script src="{dede:global.cfg_templets_skin/}/js/jquery-1.7.2.min.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/jQuery.BlackAndWhite.min.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.easing-1.3.min.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.fancybox.pack.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.flexslider-min.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.isotope.min.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.jcarousel.min.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.touchSwipe.min.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/respond.min.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/selectnav.min.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/custom.js"></script>
+</head>
+<body>
+<!-- Main Container -->
+<div id="body-wrapper"> {dede:include filename="head.htm"/}
+  <table width="100%" border="0" align="center">
+    <tbody>
+      <tr>
+        <td><!-- /Header --> 
+          <!-- Content -->
+          
+          <div id="content" class="container clearfix">
+            <h1 class="page-title-inner"><span class="section-title"> {dede:field name='typename'/}</span> We offer a<br>
+              special <span class="accent">advertising scheme</span></h1>
+          </div></td>
+      </tr>
+    </tbody>
+  </table>
+  <table width="100%" border="0">
+    <tbody>
+      <tr>
+        <td><!-- Main Container -->
+          
+          <div id="body-wrapper"> 
+            <!-- Content -->
+            <div id="content" class="container clearfix">
+              <ul class="project-feed-filter">
+                <li><a href="" class="current" data-filter="*">All</a></li>
+                <li><a href="" data-filter=".branddesign">Brand design 品牌设计</a></li>
+                <li><a href="" data-filter=".activity">Activity 公关活动</a></li>
+                <li><a href="" data-filter=".printing">Printing 印刷|制作</a></li>
+                <li><a href="" data-filter=".other">Other 其它</a></li>
+              </ul>
+              <!-- /Project Feed Filter --> 
+              
+              <!-- Project Feed -->
+              <div class="project-feed clearfix"> {dede:arclist  orderby ='id' typeid='6'}
+                <div class="one-fourth project-item branddesign"> <img src="[field:litpic /]" alt="[field:fulltitle/]">
+                  <div class="overlay"> <a href="[field:litpic /]" class="lightbox-link folio" rel="gallery"></a> <a href="[field:arcurl/]">
+                    <h5>Brand design</h5>
+                    </a>
+                    <p>[field:title/]</p>
+                  </div>
+                </div>
+                {/dede:arclist} 
+                
+                {dede:arclist  orderby ='id' typeid='7'}
+                <div class="one-fourth project-item activity"> <img src="[field:litpic /]" alt="[field:fulltitle/]">
+                  <div class="overlay"> <a href="[field:litpic /]" class="lightbox-link folio" rel="gallery"></a> <a href="[field:arcurl/]">
+                    <h5>Activity</h5>
+                    </a>
+                    <p>[field:title/]</p>
+                  </div>
+                </div>
+                {/dede:arclist} 
+                
+                {dede:arclist  orderby ='id' typeid='8'}
+                <div class="one-fourth project-item printing"> <img src="[field:litpic /]" alt="[field:fulltitle/]">
+                  <div class="overlay"> <a href="[field:litpic /]" class="lightbox-link folio" rel="gallery"></a> <a href="[field:arcurl/]">
+                    <h5>Printing</h5>
+                    </a>
+                    <p>[field:title/]</p>
+                  </div>
+                </div>
+                {/dede:arclist} 
+                
+                {dede:arclist  orderby ='id' typeid='9'}
+                <div class="one-fourth project-item other"> <img src="[field:litpic /]" alt="[field:fulltitle/]">
+                  <div class="overlay"> <a href="[field:litpic /]" class="lightbox-link folio" rel="gallery"></a> <a href="[field:arcurl/]">
+                    <h5>Other</h5>
+                    </a>
+                    <p>[field:title/]</p>
+                  </div>
+                </div>
+                {/dede:arclist} </div>
+              <!-- /Project Feed --> 
+              
+            </div>
+          </div></td>
+      </tr>
+    </tbody>
+  </table>
+  <table width="100%" border="0">
+    <tbody>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+  {dede:include filename="footer.htm"/} </div>
+</body>
+</html>

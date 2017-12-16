@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>{dede:field name='typename'/}-{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:global.cfg_keywords/}">
+<meta name="description" content="{dede:global.cfg_description/}">
+<link type="text/css" rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/style.css">
+<link type="text/css" rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/flexslider.css">
+<link type="text/css" rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/jquery.fancybox.css">
+<script src="{dede:global.cfg_templets_skin/}/js/jquery-1.7.2.min.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/jQuery.BlackAndWhite.min.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.easing-1.3.min.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.fancybox.pack.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.flexslider-min.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.isotope.min.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.jcarousel.min.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.touchSwipe.min.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/respond.min.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/selectnav.min.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/custom.js"></script>
+</head>
+<body>
+<!-- Main Container -->
+<div id="body-wrapper"> {dede:include filename="head.htm"/}
+  <table width="100%" border="0" align="center">
+    <tbody>
+      <tr>
+        <td><!-- /Header --> 
+          <!-- Content -->
+          
+          <div id="content" class="container clearfix">
+            <h1 class="page-title-inner"><span class="section-title">{dede:field name='typename'/}</span> We offer a<br>
+              special <span class="accent">advertising scheme</span></h1>
+          </div></td>
+      </tr>
+    </tbody>
+  </table>
+  <table width="100%" border="0">
+    <tbody>
+      <tr>
+        <td><!-- Main Container -->
+          
+          <div id="body-wrapper"> 
+            <!-- Content -->
+            <div id="content" class="container clearfix"> 
+              <!-- Main Content -->
+              <div id="main"> 
+                <!-- Normal news --> 
+                {dede:list pagesize='3' orderby='id'}
+                <div class="post clearfix"> <a href="[field:arcurl/]">
+                  <h5>[field:title/]</h5>
+                  </a>
+                  <ul class="post-meta">
+                    <li class="author">By：<a href="[field:arcurl/]">[field:pubdate function=strftime('%Y-%m-%d %H:%M',@me)/]</a></li>
+                  </ul>
+                  <div class="post-entry"> <a href="[field:arcurl/]" title="[field:fulltitle/]"><img src="[field:litpic/]" alt="[field:fulltitle/]" class="image"></a>
+                    <p>[field:description function='cn_substr(@me,210)'/]...<a href="[field:arcurl/]">Read more...</a></p>
+                  </div>
+                </div>
+                {/dede:list} 
+                <!-- /Normal news --> 
+                <!-- Pagination -->
+                <ul class="pagination">
+                  {dede:pagelist listitem="index,end,pre,next,pageno" listsize="5"/}
+                </ul>
+                <!-- /Pagination --> 
+                
+              </div>
+              <!-- /Main Content --> 
+              
+              <!-- Sidebar -->
+              <div id="sidebar" class="project-description"> 
+                
+                <!-- Project Navigation -->
+                <ul class="project-nav">
+                  <li><a href="" class="prev">Next</a></li>
+                  <li><a href="/a/News_dongtai" class="back">Back to Portfolio</a></li>
+                  <li><a href="" class="next">Previous</a></li>
+                </ul>
+                <!-- /Project Navigation -->
+                
+                <div class="clear"></div>
+                <div class="widget">
+                  <h4>News 最新动态</h4>
+                  <!-- Blog Categories -->
+                  <ul class="categories">
+                    {dede:arclist   row='3'  titlelen='42'   orderby ='id'  typeid='3'}
+                    <li><a href="[field:arcurl/]" title="[field:fulltitle/]" >[field:title/]</a></li>
+                    {/dede:arclist}
+                  </ul>
+                </div>
+                <!-- /Blog Categories -->
+                
+                <div class="widget short">
+                  <h5>Job Description 工作描述</h5>
+                  <ul class="check-bold compressed">
+                    <li>Brand design 品牌设计</li>
+                    <li>Activity 公关活动</li>
+                    <li>Printing 印刷</li>
+                    <li>signage &amp; space 空间导视</li>
+                    <li>Make 制作安装</li>
+                  </ul>
+                </div>
+                <a href="/a/Contact_lianxi" class="button red">Contact</a> </div>
+            </div>
+          </div>
+          
+          <!-- /Sidebar --> 
+          
+          <!-- /Content --></td>
+      </tr>
+    </tbody>
+  </table>
+  <table width="100%" border="0">
+    <tbody>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+  {dede:include filename="footer.htm"/} </div>
+</body>
+</html>

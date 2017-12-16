@@ -1,0 +1,112 @@
+
+<table width="100%" border="0">
+  <tbody>
+    <tr>
+      <td width="76%"><div id="content" class="container clearfix">
+          <h4><span class="highlight" space="">CASE</span>案例</h4>
+        </div></td>
+      <td width="24%"><div id="content" class="container clearfix">
+          <div align="right"><a href="/a/Works_anli">More </a></div>
+        </div></td>
+    </tr>
+  </tbody>
+</table>
+<table width="100%" border="0" align="center">
+  <tbody>
+    <tr>
+      <td><!-- Content -->
+        
+        <div class="container clearfix">
+          <div class="logo-list">
+            <ul>
+              {dede:arclist  row='5'  orderby ='id'  typeid='4'}
+              <li><a href="[field:arcurl/]">
+                <div class="bw-wrapper"><img src="[field:litpic /]" alt="[field:fulltitle/]" width="186px" height="89px"></div>
+                </a></li>
+              {/dede:arclist}
+            </ul>
+          </div>
+          <!-- /Logo List --> 
+        </div></td>
+    </tr>
+  </tbody>
+</table>
+<table width="100%" border="0" align="center">
+  <tbody>
+    <tr>
+      <td><!-- Footer -->
+        
+        <div id="footer">
+          <div class="container clearfix"> 
+            
+            <!-- About -->
+            <div class="one-fourth"> <a href="/a/About_women" class="logo"><img src="{dede:global.cfg_templets_skin/}/images/logo_footer.gif" alt="标志设计"></a>
+              <p>{dede:sql sql="select content from dede_arctype where id=1"}[field:content function=cn_substr(Html2Text(@me),180)/]...{/dede:sql}</p>
+            </div>
+            <!-- /About --> 
+            
+            <!-- Twitter Feed -->
+            <div class="one-fourth">
+              <h5>news 动 态</h5>
+              <div class="twitter-feed"> {dede:arclist  row='3'  orderby ='id'  typeid='3' }
+                <p>[field:title/]<a href="[field:arcurl/]"> View....</a> <span class="tweet-time">[field:pubdate function=strftime('%Y-%m-%d %H:%M',@me)/]</span> </p>
+                {/dede:arclist}
+                <p> <a href="/a/News_dongtai">更多 More</a> </p>
+              </div>
+            </div>
+            <!-- /Twitter Feed --> 
+            
+            <!-- Contacts -->
+            <div class="one-fourth">
+              <h5>Contact 联 系</h5>
+              <p class="address">{dede:global.cfg_dz/}</p>
+              <p class="phone">Phone: (业务直线) {dede:global.cfg_tel/} <br>
+                Fax: {dede:global.cfg_dh/}</p>
+              <p class="email">Email:{dede:global.cfg_yx/}</p>
+            </div>
+            <!-- /Contacts --> 
+            
+            <!-- Photo Stream -->
+            <div class="one-fourth last">
+              <h5>Photo Stream</h5>
+              <ul class="photo-stream">
+                {dede:arclist  row='8'  typeid='4' }
+                <li><a href="[field:arcurl/]"><img src="[field:litpic /]" alt="[field:fulltitle/]"></a></li>
+                {/dede:arclist}
+              </ul>
+            </div>
+            <!-- /Photo Stream --> 
+            
+          </div>
+          <div class="clear"></div>
+          <div class="info container clearfix"> 
+            
+            <!-- Copyright -->
+            <ul class="copyright">
+              <li>{dede:global.cfg_powerby/}  {dede:global.cfg_beian/}</li>
+              <li><a href="/">Legal Notice 法律公告</a></li>
+              <li><a href="/">Terms &amp; Conditions 条款规则</a></li>
+              <li><a href="/" target="_blank">RSS</a></li>
+            </ul>
+            <!-- /Copyright --> 
+            
+            <!-- Social Links -->
+            <ul class="social-links">
+              <li class="twitter"><a href="/">Twitter</a></li>
+              <li class="facebook"><a href="/">Facebook</a></li>
+              <li class="linkedin"><a href="/">LinkedIn</a></li>
+              <li class="digg"><a href="/">Digg</a></li>
+              <li class="vimeo"><a href="/">Vimeo</a></li>
+            </ul>
+            <!-- /Social Links --> 
+            
+          </div>
+        </div>
+        
+        <!-- /Footer --></td>
+    </tr>
+  </tbody>
+</table>
+<div id="back-top"><a href="#top"></a></div>
+<!-- /Back to Top --> 
+<script src="{dede:global.cfg_templets_skin/}/js/qq.js"></script>

@@ -1,0 +1,1 @@
+<p>[field:title/]<a href="[field:arcurl/]"> View....</a> <span class="tweet-time">[field:pubdate function=strftime('%Y-%m-%d %H:%M',@me)/]</span> </p>
